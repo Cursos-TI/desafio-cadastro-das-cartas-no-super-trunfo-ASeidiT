@@ -8,7 +8,7 @@ int main(){
     char estado_1, estado_2;
     char codigo_1_1[3], cidade_1_1[20], codigo_2_2[3], cidade_2_2[20];
     int populacao_1_1, ptos_tur_1_1, populacao_2_2, ptos_tur_2_2;
-    float area_1_1, PIB_1_1, area_2_2, PIB_2_2;
+    float area_1_1, PIB_1_1, area_2_2, PIB_2_2, densid_pop_1, pib_percapita_1, densid_pop_2, pib_percapita_2;
 
 // SAUDAÇÃO DE BOAS VINDAS AO JOGO
     printf("Olá, bem vindo ao jogo Super trunfo do curso de Análise de Sistemas Estácio - 1° Semestre 2025!\n");
@@ -31,6 +31,9 @@ int main(){
     printf("Informe quantos pontos turísticos a cidade tem:\n");
     scanf(" %d", &ptos_tur_1_1);
 
+    densid_pop_1 = populacao_1_1 / area_1_1;
+    pib_percapita_1 = (PIB_1_1 * 1000000000) / populacao_1_1;
+
 // IMPRESSÃO DOS DADOS DA CARTA 1
     printf("\nCARTA 1:\n");
     printf("Estado: %c\n", estado_1);
@@ -40,6 +43,8 @@ int main(){
     printf("Área: %.2f\n", area_1_1);
     printf("PIB: %.2f\n", PIB_1_1);
     printf("Número de pontos turísticos: %d\n", ptos_tur_1_1);
+    printf("Densidade populacional: %.2f\n", densid_pop_1);
+    printf("Pib per capita: %.2f\n", pib_percapita_1);
 
 // CAPTURA DE VARIÁVEIS DA CARTA 2
     printf("\nCARTA 2\n\n");
@@ -58,6 +63,9 @@ int main(){
     printf("Informe quantos pontos turísticos a cidade tem:\n");
     scanf(" %d", &ptos_tur_2_2);
 
+    densid_pop_2 = populacao_2_2 / area_2_2;
+    pib_percapita_2 = (PIB_2_2 * 1000000000) / populacao_2_2;
+
 // IMPRESSÃO DOS DADOS DA CARTA 2
     printf("\nCARTA 2:\n");
     printf("Estado: %c\n", estado_2);
@@ -66,7 +74,9 @@ int main(){
     printf("População: %d\n", populacao_2_2);
     printf("Área: %.2f\n", area_2_2);
     printf("PIB: %.2f\n", PIB_2_2);
-    printf("Número de pontos turísticos: %d\n\n", ptos_tur_2_2);
+    printf("Número de pontos turísticos: %d\n", ptos_tur_2_2);
+    printf("Densidade populacional: %.2f\n", densid_pop_2);
+    printf("Pib per capita: %.2f\n\n", pib_percapita_2);
 
 // MENSAGEM DE ENCERRAMENTO
     printf("Dados registrados com sucesso!\n");
